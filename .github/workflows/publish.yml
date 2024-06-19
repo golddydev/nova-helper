@@ -29,6 +29,8 @@ jobs:
           check-latest: true
           registry-url: https://registry.npmjs.org/
           always-auth: true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: Update npm
         run: npm install -g npm@latest

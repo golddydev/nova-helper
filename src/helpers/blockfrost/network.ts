@@ -1,4 +1,4 @@
-import { Network } from "lucid-cardano";
+import { Network } from "@lucid-evolution/lucid";
 
 const getNetwork = (apiKey: string): string => {
   const network = apiKey.substring(0, 7);
@@ -10,7 +10,7 @@ const getNetwork = (apiKey: string): string => {
   return network;
 };
 
-const getLucidNetwork = (apiKey: string): Network => {
+const getLucidEvolutionNetwork = (apiKey: string): Network => {
   const network = getNetwork(apiKey);
 
   if (network == "mainnet") {
@@ -36,4 +36,4 @@ const getCardanoNetwork = (apiKey: string): string => {
   }
 };
 
-export { getLucidNetwork, getNetwork, getCardanoNetwork };
+export { getLucidEvolutionNetwork, getNetwork, getCardanoNetwork };

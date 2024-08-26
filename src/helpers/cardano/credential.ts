@@ -1,4 +1,8 @@
-import { AddressDetails, Credential, getAddressDetails } from "lucid-cardano";
+import {
+  AddressDetails,
+  Credential,
+  getAddressDetails,
+} from "@lucid-evolution/lucid";
 import { Err, Ok, Result } from "ts-res";
 
 const getAddressDetail = (address: string): Result<AddressDetails, string> => {

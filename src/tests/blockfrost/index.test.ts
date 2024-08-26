@@ -1,21 +1,30 @@
 import test from "ava";
-import { getCardanoNetwork, getLucidNetwork, getNetwork } from "index";
+import { getCardanoNetwork, getLucidEvolutionNetwork, getNetwork } from "index";
 
 test("getLucidNetwork returns Mainnet", (t) => {
-  t.is(getLucidNetwork("mainnet29d9c374b446614df22395fa435cca20"), "Mainnet");
+  t.is(
+    getLucidEvolutionNetwork("mainnet29d9c374b446614df22395fa435cca20"),
+    "Mainnet"
+  );
 });
 
 test("getLucidNetwork returns Preview", (t) => {
-  t.is(getLucidNetwork("previewfa4b94fc7158b77e67b7bcc0b7428597"), "Preview");
+  t.is(
+    getLucidEvolutionNetwork("previewfa4b94fc7158b77e67b7bcc0b7428597"),
+    "Preview"
+  );
 });
 
 test("getLucidNetwork returns Preprod", (t) => {
-  t.is(getLucidNetwork("preprodfc361d8107bfdfe54065a18ddf1944a3"), "Preprod");
+  t.is(
+    getLucidEvolutionNetwork("preprodfc361d8107bfdfe54065a18ddf1944a3"),
+    "Preprod"
+  );
 });
 
 test("getLucidNetwork throws error when key invalid", (t) => {
   t.throws(() => {
-    getLucidNetwork("customy778357aac92fe1eea0909729931c78ed");
+    getLucidEvolutionNetwork("customy778357aac92fe1eea0909729931c78ed");
   });
 });
 

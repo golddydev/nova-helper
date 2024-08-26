@@ -1,15 +1,17 @@
-import { Blockfrost, Lucid } from "lucid-cardano";
-import { getLucidNetwork, getNetwork } from "../blockfrost";
+import { Blockfrost, Lucid, LucidEvolution } from "@lucid-evolution/lucid";
+import { getLucidEvolutionNetwork, getNetwork } from "../blockfrost";
 
-const getLucid = async (blockfrostApiKey: string): Promise<Lucid> => {
+const getLucidEvolution = async (
+  blockfrostApiKey: string
+): Promise<LucidEvolution> => {
   const network = getNetwork(blockfrostApiKey);
-  return await Lucid.new(
+  return await Lucid(
     new Blockfrost(
       `https://cardano-${network}.blockfrost.io/api/v0`,
       blockfrostApiKey
     ),
-    getLucidNetwork(blockfrostApiKey)
+    getLucidEvolutionNetwork(blockfrostApiKey)
   );
 };
 
-export { getLucid };
+export { getLucidEvolution };

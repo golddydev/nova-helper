@@ -10,7 +10,7 @@ const getNetwork = (apiKey: string): string => {
   return network;
 };
 
-const getLucidEvolutionNetwork = (apiKey: string): Network => {
+const getLucidNetwork = (apiKey: string): Network => {
   const network = getNetwork(apiKey);
 
   if (network == "mainnet") {
@@ -36,4 +36,4 @@ const getCardanoNetwork = (apiKey: string): string => {
   }
 };
 
-export { getLucidEvolutionNetwork, getNetwork, getCardanoNetwork };
+export { getLucidNetwork, getNetwork, getCardanoNetwork };

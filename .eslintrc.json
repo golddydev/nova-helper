@@ -8,7 +8,7 @@
     "plugin:import/typescript",
     "prettier"
   ],
-  "plugins": ["import", "@typescript-eslint"],
+  "plugins": ["import", "simple-import-sort", "@typescript-eslint"],
   "rules": {
     "padding-line-between-statements": [
       "error",
@@ -40,6 +40,8 @@
       }
     ],
     "no-constant-condition": "off",
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
   }
 }

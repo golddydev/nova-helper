@@ -36,4 +36,4 @@ const getCardanoNetwork = (apiKey: string): string => {
   }
 };
 
-export { getLucidNetwork, getNetwork, getCardanoNetwork };
+export { getCardanoNetwork, getLucidNetwork, getNetwork };

@@ -1,5 +1,5 @@
-import { test, expect } from "vitest";
 import { convertError as convert } from "index";
+import { expect, test } from "vitest";
 
 test("can convert string", () => {
   expect(convert("this is a string")).toBe("this is a string");

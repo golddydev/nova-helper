@@ -1,5 +1,5 @@
-import { test, expect } from "vitest";
 import { invariant, mayFail } from "index";
+import { expect, test } from "vitest";
 
 test("can fail", () => {
   const result = mayFail(() => {

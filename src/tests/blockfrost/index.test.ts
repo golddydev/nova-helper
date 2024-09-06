@@ -1,5 +1,5 @@
-import { test, expect } from "vitest";
 import { getCardanoNetwork, getLucidNetwork, getNetwork } from "index";
+import { expect, test } from "vitest";
 
 test("getLucidNetwork returns Mainnet", () => {
   expect(getLucidNetwork("mainnet29d9c374b446614df22395fa435cca20")).toBe(

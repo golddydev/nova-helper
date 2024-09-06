@@ -1,5 +1,6 @@
-import { test, expect } from "vitest";
 import { invariant, mayFailAsync } from "index";
+import { expect, test } from "vitest";
+
 import { sleep } from ".";
 
 test("can fail", async () => {

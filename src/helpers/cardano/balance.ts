@@ -73,4 +73,4 @@ const getAddressBalance = async (
   }, balances);
 };
 
-export { getUtxos, getAddressUtxos, getAddressBalance };
+export { getAddressBalance, getAddressUtxos, getUtxos };

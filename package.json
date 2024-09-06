@@ -2,19 +2,26 @@
   "name": "nova-helper",
   "version": "0.1.0",
   "description": "Nova helper module",
-  "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "engines": {
     "node": "^18.18.2",
     "npm": ">=10.5"
+  },
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
   },
   "author": "Golddy Dev <firingdev@gmail.com> (http://github.com/golddydev/)",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "rm -rf ./dist && npx tsc && rm -rf ./dist/tests",
+    "build": "tsup",
     "prettier": "npx prettier -w '**/*.{js,jsx,ts,tsx,json,yml.j2,yml,yaml,.*}'",
     "lint": "concurrently \"npx prettier --check '**/*.{js,jsx,ts,tsx,json,yml.j2,yml,yaml,.*}'\" \"npx eslint . --max-warnings=0\"",
     "test": "vitest run"

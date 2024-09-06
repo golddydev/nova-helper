@@ -1,4 +1,5 @@
 import { Err, Ok, Result } from "ts-res";
+
 import convertError from "./convert";
 
 type Callback<T> = () => T;

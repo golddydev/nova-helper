@@ -1,5 +1,6 @@
 import { config, DotenvConfigOptions } from "dotenv";
 import { Err, Ok, Result } from "ts-res";
+
 import { mayFail } from "../error";
 
 type ConfigTypeNames = "string" | "number";

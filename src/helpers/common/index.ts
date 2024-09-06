@@ -1,3 +1,3 @@
-export * from "./invariant";
-export * from "./monitor";
-export * from "./utils";
+export * from "./invariant.js";
+export * from "./monitor.js";
+export * from "./utils.js";

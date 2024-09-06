@@ -1,4 +1,4 @@
-import { invariant, mayFail } from "index";
+import { invariant, mayFail } from "index.js";
 import { expect, test } from "vitest";
 
 test("can fail", () => {

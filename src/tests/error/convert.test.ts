@@ -1,4 +1,4 @@
-import { convertError as convert } from "index";
+import { convertError as convert } from "index.js";
 import { expect, test } from "vitest";
 
 test("can convert string", () => {

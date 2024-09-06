@@ -1,6 +1,6 @@
 import { Blockfrost, Lucid, LucidEvolution } from "@lucid-evolution/lucid";
 
-import { getLucidNetwork, getNetwork } from "../blockfrost";
+import { getLucidNetwork, getNetwork } from "../blockfrost/index.js";
 
 const getLucid = async (blockfrostApiKey: string): Promise<LucidEvolution> => {
   const network = getNetwork(blockfrostApiKey);

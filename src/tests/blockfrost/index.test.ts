@@ -1,4 +1,4 @@
-import { getCardanoNetwork, getLucidNetwork, getNetwork } from "index";
+import { getCardanoNetwork, getLucidNetwork, getNetwork } from "index.js";
 import { expect, test } from "vitest";
 
 test("getLucidNetwork returns Mainnet", () => {

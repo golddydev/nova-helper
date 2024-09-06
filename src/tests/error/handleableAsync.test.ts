@@ -1,7 +1,7 @@
-import { invariant, mayFailAsync } from "index";
+import { invariant, mayFailAsync } from "index.js";
 import { expect, test } from "vitest";
 
-import { sleep } from ".";
+import { sleep } from "./index.js";
 
 test("can fail", async () => {
   const result = await mayFailAsync(async () => {

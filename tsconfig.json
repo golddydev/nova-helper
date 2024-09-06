@@ -15,6 +15,6 @@
     "outDir": "dist",
     "declaration": true
   },
-  "include": ["src/**/*", "src/tests/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

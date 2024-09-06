@@ -1,40 +1,40 @@
-import test from "ava";
+import { test, expect } from "vitest";
 import { invariant, mayFailAsync } from "index";
 import { sleep } from ".";
 
-test("can fail", async (t) => {
+test("can fail", async () => {
   const result = await mayFailAsync(async () => {
     await sleep();
     throw new Error("Error");
   }).complete();
 
   invariant(!result.ok);
-  t.is(result.error, "Error");
+  expect(result.error).toBe("Error");
 });
 
-test("can succeed", async (t) => {
+test("can succeed", async () => {
   const result = await mayFailAsync(async () => {
     await sleep();
     return "success";
   }).complete();
 
   invariant(result.ok);
-  t.is(result.data, "success");
+  expect(result.data).toBe("success");
 });
 
-test("can handle", async (t) => {
+test("can handle", async () => {
   let handled = false;
 
   const result = await mayFailAsync(async () => {
     throw new Error("this is an error");
   })
     .handle((message) => {
-      t.is(message, "this is an error");
+      expect(message, "this is an error");
       handled = true;
     })
     .complete();
 
   invariant(!result.ok);
-  t.is(result.error, "this is an error");
-  t.true(handled);
+  expect(result.error).toBe("this is an error");
+  expect(handled).toBe(true);
 });

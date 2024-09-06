@@ -1,33 +1,33 @@
-import test from "ava";
+import { test, expect } from "vitest";
 import { invariant, mayFail } from "index";
 
-test("can fail", (t) => {
+test("can fail", () => {
   const result = mayFail(() => {
     throw new Error("Error");
   });
 
   invariant(!result.ok);
-  t.is(result.error, "Error");
+  expect(result.error).toBe("Error");
 });
 
-test("can succeed", (t) => {
+test("can succeed", () => {
   const result = mayFail(() => "success");
 
   invariant(result.ok);
-  t.is(result.data, "success");
+  expect(result.data).toBe("success");
 });
 
-test("can handle", (t) => {
+test("can handle", () => {
   let handled = false;
 
   const result = mayFail(() => {
     throw new Error("this is an error");
   }).handle((message) => {
-    t.is(message, "this is an error");
+    expect(message, "this is an error");
     handled = true;
   });
 
   invariant(!result.ok);
-  t.is(result.error, "this is an error");
-  t.true(handled);
+  expect(result.error).toBe("this is an error");
+  expect(handled).toBe(true);
 });

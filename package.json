@@ -1,6 +1,6 @@
 {
   "name": "nova-helper",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Nova helper module",
   "engines": {
     "node": ">=18.18",
